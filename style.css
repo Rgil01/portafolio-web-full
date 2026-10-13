@@ -418,7 +418,7 @@ border-style: dashed;
 .scroll-cue { 
 position: absolute; 
 bottom: 25px; 
-left: 20%; 
+left: 25%; 
 transform: translateX(-50%); 
 display: flex; 
 align-items: center; 
