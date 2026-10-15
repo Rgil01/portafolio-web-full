@@ -1,4 +1,3 @@
-/* Funcionalidades interactivas del portafolio */
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Menú móvil: abrir/cerrar y cerrarlo al seleccionar una sección.
   const menuToggle = document.querySelector("#menu-toggle");
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }
 
-  // 4. Buscador de proyectos: filtra las tarjetas mientras se escribe.
+  // 4. BUSCADOR DE PROYECTOS.
   const searchInput = document.querySelector("#project-search");
   const projectCards = [...document.querySelectorAll(".project-card")];
   const projectCount = document.querySelector("#project-count");
@@ -95,18 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const avatar = document.querySelector("#avatar-ramon");
-
     if (!avatar) return;
-
     const reducirMovimiento = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
     // Saludo inicial al cargar la página.
     if (!reducirMovimiento) {
-
         avatar.classList.add("avatar-greeting");
-
         setTimeout(() => {
             avatar.classList.remove("avatar-greeting");
         }, 1200);
@@ -115,16 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Repetir el saludo cuando el visitante pulse el avatar.
     avatar.addEventListener("click", () => {
-
         if (reducirMovimiento) return;
-
         avatar.classList.remove("avatar-greeting");
 
         // Reinicia la animación.
         void avatar.offsetWidth;
-
         avatar.classList.add("avatar-greeting");
-
         setTimeout(() => {
             avatar.classList.remove("avatar-greeting");
         }, 1200);
