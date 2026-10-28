@@ -26,11 +26,36 @@ html {
   scrollbar-color: var(--turquoise-dark) var(--background); 
 }
 body {
-  background: var(--background);
+  position: relative;
+  isolation: isolate;
+  background: transparent;
   color: var(--text);
   font-family: "Inter", "Segoe UI", sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+.page-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--background);
+  pointer-events: none;
+}
+
+.page-background::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: rgba(7, 11, 16, 0.62);
+}
+
+.page-background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 p{
@@ -601,7 +626,7 @@ font-size: .72rem;
 
 /* Proyectos */
 .projects-section { 
-background: var(--background-alt); 
+background: rgba(11, 18, 26, 0.72);
 border-top: 1px solid rgba(255,255,255,.025); 
 border-bottom: 1px solid rgba(255,255,255,.025); 
 }
@@ -714,6 +739,24 @@ background-image: linear-gradient(135deg, #10151f, #12302f);
 position: relative; 
 z-index: 1; 
 font-size: 3rem; 
+}
+
+.project-preview-portrait {
+position: relative;
+z-index: 1;
+width: 112px;
+height: 112px;
+border: 2px solid rgba(32,217,210,.7);
+border-radius: 50%;
+object-fit: cover;
+}
+
+.project-logo-image {
+position: relative;
+z-index: 1;
+width: min(78%, 280px);
+max-height: 76px;
+object-fit: contain;
 }
 
 .preview-label, .preview-caption {
@@ -843,7 +886,7 @@ flex-shrink: 0;
 
 .site-footer { 
 border-top: 1px solid var(--border); 
-background: #05080c; 
+background: rgba(5, 8, 12, 0.88);
 }
 
 .footer-content { 
@@ -1250,7 +1293,7 @@ COMO VERTIGO MAREOS APILEPSIA ES IMPORTANTE EN TODAS LAS PAGINAS PONERLE ESTO OJ
             rgba(32, 217, 210, 0.055),
             transparent 48%
         ),
-        var(--background);
+        rgba(7, 11, 16, 0.28);
 }
 
 

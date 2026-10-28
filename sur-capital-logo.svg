@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" role="img" aria-labelledby="title">
+  <title id="title">Sur Capital</title>
+  <g fill="#c7f36b">
+    <path d="M5 72 10 54h8l-5 18z"/>
+    <path d="m19 72 7-25h8l-7 25z"/>
+    <path d="m33 72 4-15h8l-4 15z"/>
+  </g>
+  <g fill="#fff" font-family="Arial, sans-serif">
+    <text x="58" y="46" font-size="29" font-weight="700" letter-spacing="2">SUR</text>
+    <text x="59" y="69" font-size="15" font-weight="500" letter-spacing="5">CAPITAL</text>
+  </g>
+</svg>
